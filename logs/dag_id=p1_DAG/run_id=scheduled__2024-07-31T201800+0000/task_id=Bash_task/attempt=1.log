@@ -1,0 +1,23 @@
+[2024-07-31T20:21:00.348+0000] {local_task_job_runner.py:120} INFO - ::group::Pre task execution logs
+[2024-07-31T20:21:00.378+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: p1_DAG.Bash_task scheduled__2024-07-31T20:18:00+00:00 [queued]>
+[2024-07-31T20:21:00.385+0000] {taskinstance.py:2076} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: p1_DAG.Bash_task scheduled__2024-07-31T20:18:00+00:00 [queued]>
+[2024-07-31T20:21:00.386+0000] {taskinstance.py:2306} INFO - Starting attempt 1 of 1
+[2024-07-31T20:21:00.398+0000] {taskinstance.py:2330} INFO - Executing <Task(BashOperator): Bash_task> on 2024-07-31 20:18:00+00:00
+[2024-07-31T20:21:00.402+0000] {standard_task_runner.py:64} INFO - Started process 312 to run task
+[2024-07-31T20:21:00.404+0000] {standard_task_runner.py:90} INFO - Running: ['airflow', 'tasks', 'run', 'p1_DAG', 'Bash_task', 'scheduled__2024-07-31T20:18:00+00:00', '--job-id', '7', '--raw', '--subdir', 'DAGS_FOLDER/p1_DAG.py', '--cfg-path', '/tmp/tmpp27s0dz8']
+[2024-07-31T20:21:00.406+0000] {standard_task_runner.py:91} INFO - Job 7: Subtask Bash_task
+[2024-07-31T20:21:00.455+0000] {task_command.py:426} INFO - Running <TaskInstance: p1_DAG.Bash_task scheduled__2024-07-31T20:18:00+00:00 [running]> on host cd5f98533ee2
+[2024-07-31T20:21:00.538+0000] {taskinstance.py:2648} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='p1_DAG' AIRFLOW_CTX_TASK_ID='Bash_task' AIRFLOW_CTX_EXECUTION_DATE='2024-07-31T20:18:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2024-07-31T20:18:00+00:00'
+[2024-07-31T20:21:00.539+0000] {taskinstance.py:430} INFO - ::endgroup::
+[2024-07-31T20:21:00.547+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2024-07-31T20:21:00.548+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'python $AIRFLOW_HOME/dags/scripts/pipeline1.py']
+[2024-07-31T20:21:00.555+0000] {subprocess.py:86} INFO - Output:
+[2024-07-31T20:21:01.204+0000] {subprocess.py:93} INFO - Transforming...
+[2024-07-31T20:21:01.205+0000] {subprocess.py:93} INFO - Loading...
+[2024-07-31T20:21:01.206+0000] {subprocess.py:93} INFO - Finished.
+[2024-07-31T20:21:01.271+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2024-07-31T20:21:01.272+0000] {taskinstance.py:441} INFO - ::group::Post task execution logs
+[2024-07-31T20:21:01.293+0000] {taskinstance.py:1206} INFO - Marking task as SUCCESS. dag_id=p1_DAG, task_id=Bash_task, run_id=scheduled__2024-07-31T20:18:00+00:00, execution_date=20240731T201800, start_date=20240731T202100, end_date=20240731T202101
+[2024-07-31T20:21:01.343+0000] {local_task_job_runner.py:243} INFO - Task exited with return code 0
+[2024-07-31T20:21:01.356+0000] {taskinstance.py:3503} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-07-31T20:21:01.360+0000] {local_task_job_runner.py:222} INFO - ::endgroup::
